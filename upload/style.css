@@ -1,0 +1,541 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --first: #F2F2F2 ;
+    --shadow: #205459;
+    --degree: #329AA6 ;
+    --background: #84A9D9;
+    --brand: #6698D9;
+}
+
+h1, h2, h3{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+h1{
+    color: var(--first);
+    font-size: 1rem;
+}
+
+h2{
+    padding-top: 80px;
+    font-size: 1.5rem;
+    word-spacing: 2px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--shadow);
+}
+
+h2::after{
+    display: block;
+    height: 2px;
+    background-color: var(--brand);
+    width: 100px;
+    margin: auto;
+    margin-top:30px;
+    margin-bottom: 20px;
+    content: "";
+}
+
+h3{
+    font-size: 1.1rem;
+    word-spacing: 1px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn{
+    display:inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 200px;
+    border: 1px solid var(--shadow);
+    color: var(--first) ;
+    transition: background-color 0.4s, border 0.4s, color 0.4s;
+    margin-right: 40px;
+}
+
+.btn-completo{
+    background-color: var(--degree);
+}
+
+.btn:hover{
+    background-color: var(--background);
+    border: 1px solid var(--brand);
+    color: var(--first);
+}
+
+/*menu*/
+nav {
+    padding: 20px 25px;
+    background:linear-gradient(to right, var(--shadow), var(--degree));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--first);
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li  {
+    margin-left: 30px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    font-family:'Nunito', sans-serif;
+    font-size: 12px;
+    color: #fff;
+}
+
+#hamburger-toggle {
+    display: none;
+}
+
+.hamburger {
+    width: 30px;
+    height: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+}
+
+.hamburger .bar {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.hamburger .bar::before, .hamburger .bar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:var(--first);
+    transition: all 0.3seg;
+}
+
+.hamburger .bar::before {
+    transform: translateY(-10px);
+}
+
+.hamburger .bar::after {
+    transform: translateY(10px);
+}
+/*menu fin*/
+
+/*Estilos para menú sticky*/
+.fixed{
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    background: linear-gradient(to right, 
+    var(--brand), var(--shadow));
+    color: var(--first);
+}
+/*Estilos para menú sticky final*/
+
+/*Scroll bar en Chrome*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+}
+/*Scroll bar final*/
+
+/*Slider*/
+.slider{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 500%;
+
+    animation: move 20s infinite alternate linear;
+}
+
+.slider li{
+    width: 80%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+}
+
+@keyframes move{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+/*Slider fin*/
+
+
+/*Sección Nuestro equipo de trabajo*/
+.team_description{
+    overflow: auto;
+}
+
+.photo_team {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.photo{
+    display: block;
+    margin: auto;
+}
+
+
+.container{
+    margin: auto;
+    width: 720px;
+    height: 450px;
+    margin-top: 35px;
+}
+
+.container-paragraf{
+    width: 100%;
+    float: right;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/*Sección Nuestro equipo de trabajo final*/
+
+/*Sección servicios*/
+.caracteristicas{
+    overflow: auto;
+}
+
+.c_paragrafo{
+    width: 80%;
+    margin: auto;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.c_info{
+    padding-top: 60px;
+    margin: auto;
+}
+
+.c_info h3{
+    text-align: center;
+}
+
+.c_info p{
+    text-align: center;
+}
+
+.col{
+    width: 25%;
+    float: left;
+}
+
+
+.c_info i{
+    width: 100%;
+    margin: auto;
+    font-size: 3.5rem;
+    color: var(--brand);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*Sección servicios final*/
+
+/*Sección registrate*/ 
+
+.signup{
+    overflow: hidden;
+}
+
+.signup img{
+    display:block;
+    margin: auto;
+    width: 20%;
+    margin-bottom: 25px;
+}
+
+
+.signup-container p{
+    padding: 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.signup-container i{
+    color: var(--brand);
+    width: 20%;
+    font-size: 2rem;
+}
+
+.signup-container a{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.signup-steps {
+    display: block;
+    width: 33%;
+    margin: auto;
+}
+
+.signup-steps h3 {
+    text-align: center;
+}
+
+/*Sección registrate final*/
+
+
+/*Sección contacto*/
+.contact-container{
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contact-container ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: move 25s infinite alternate linear;
+}
+
+.contact-container li{
+    width: 80%;
+    list-style: none;
+}
+
+.contact-container img{
+    width: 100%;
+}
+
+@keyframes move{
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+/*Sección contacto final*/
+
+/*Footer*/
+footer{
+    background-color: black;
+    color: var(--first);
+    position: relative;
+    height: 30vh;
+    font-size: 0.7rem;
+}
+
+footer h4{
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.politicas {
+    position: absolute;
+    width: 80%;
+    left:0;
+    right: 0;
+    top: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+.politicas::after {
+    display:block;
+    content:"";
+    width: 200px;
+    margin: 20px auto;
+    height: 2px;
+    background-color: var(--first);
+}
+/*Footer final*/
+
+@media (max-width: 320px) {
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(to right,var(--shadow), var(--degree));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 0.3seg;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .nav-list li a {
+        display: inline-block;
+        font-size: 20px;
+        padding: 15px 20px;
+        transition: all 0.3;
+    }
+
+    .nav-list li a:hover {
+        background-color: var(--brand);
+        color: var(--first);
+        transform: translateY(-10px);
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 999;
+    }
+
+    #hamburger-toggle:checked ~ .nav-list {
+        transform: none;
+    }
+
+    #hamburger-toggle:checked ~ .hamburger .bar::before{ 
+        transform: rotate(45deg);
+    }
+
+    #hamburger-toggle:checked ~ .hamburger .bar {
+        background-color: transparent;
+    }
+
+    #hamburger-toggle:checked ~ .hamburger .bar::after{
+        transform: rotate(-45deg);
+    }
+
+    /*Sección sobre nosotros*/
+    .photo {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+
+    .container{
+        margin: auto;
+        width: 80%;
+        margin-top: 10px
+    }
+
+    .container-paragraf{
+        width: 97%;
+        font-size: 18px;
+        text-align: center;
+    }
+    /*Sección sobre nosotros final */
+
+    /*Sección servicios*/
+    .c_info {
+        padding-top: 20px
+    }
+
+    .c_info i {
+        margin-bottom: 20px;
+    }
+
+    .col {
+        width: 100%;
+        margin: auto;
+        display: block;
+    }    
+    /*Sección servicios final*/
+
+    /*Sección citas*/
+    .photo-signup img{
+        display:block;
+        width: 40%;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+
+    .signup-steps {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    
+    
+    /*Sección citas final*/
+
+    /*Sección contacto*/
+    .contact-container  {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    /*Sección contacto Final*/
+
+    /*Footer*/
+    footer h4 {
+        font-size: 15px;
+    }
+    /*Footer final*/
+}
+
